@@ -1,6 +1,8 @@
 <div class="w-full">
     <app-navigation></app-navigation>
-    <div class="w-full pt-[72px]">
-        <ng-content></ng-content>
+    <div class="grid grid-cols-1 items-start content-start justify-center justify-items-center w-full pt-[72px]">
+        <div class="w-full max-w-[1024px]" [ngStyle]="childrenStyle">
+            <ng-content></ng-content>
+        </div>
     </div>
 </div>
