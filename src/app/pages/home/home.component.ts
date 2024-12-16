@@ -7,5 +7,8 @@ import { Component, signal, WritableSignal } from '@angular/core';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  public title: WritableSignal<string> = signal('test');
+  public title: WritableSignal<number> = signal(0);
+  public changeTitle: () => void = () => {
+    this.title.update((value) => value + 1);
+  };
 }
