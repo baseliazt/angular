@@ -8,8 +8,4 @@ import { CommonModule } from '@angular/common';
   templateUrl: './application.component.html',
   styleUrl: './application.component.scss',
 })
-export class ApplicationComponent {
-  public childrenStyle = {
-    background: 'linear-gradient(180deg, #FFFFFF 56.92%, #F8FFF4 100%)',
-  };
-}
+export class ApplicationComponent {}
