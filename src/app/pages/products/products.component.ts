@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, signal, WritableSignal } from '@angular/core';
+import { Component, input, signal, WritableSignal } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
@@ -34,7 +34,8 @@ export class ProductsComponent {
 
   public search: WritableSignal<string> = signal('');
 
-  public handleChangeSearch = () => {
-    // this.search.set(e)
+  public handleInputSearch = (e: Event) => {
+    const inputValue = (e.target as HTMLInputElement).value;
+    this.search.set(inputValue);
   };
 }
